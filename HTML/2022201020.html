@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>crow and egle game</title>
+  <style>
+    .grid-container {
+
+      grid-template-columns: auto auto auto;
+      background-color: #346f74;
+      padding: 10px;
+      display: flex;
+    }
+
+    .grid-item {
+      background-color: rgba(206, 37, 37, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      font-size: 30px;
+      text-align: center;
+
+      flex: 1;
+    }
+
+    .grid-item3 {
+      height: 630px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+      border-radius: 10%;
+
+      flex: 1;
+    }
+
+    .kao {
+      cursor: pointer;
+    }
+
+    .obj {
+      display: inline-block;
+    }
+
+    .place {
+      position: fixed;
+      border-radius: 50%;
+      outline: 2px solid rgb(1, 1, 19);
+      width: 40px;
+      height: 40px;
+      background-color: rgb(223, 210, 175);
+
+    }
+
+    #div1 {
+
+      top: 212px;
+      left: 347px;
+    }
+
+    #div2 {
+
+      top: 212px;
+      left: 963px;
+
+    }
+
+    #div3 {
+
+      top: 212px;
+      left: 580.6px;
+
+    }
+
+    #div4 {
+
+      top: 212px;
+      left: 733.4px;
+
+    }
+
+    #div5 {
+
+      top: 97px;
+      left: 661px;
+
+
+    }
+
+    #div6 {
+
+      top: 371px;
+      left: 661px;
+
+
+    }
+
+    #div7 {
+
+      top: 500px;
+      left: 411px;
+
+
+    }
+
+    #div8 {
+
+      top: 500px;
+      left: 911px;
+
+
+    }
+
+    #div9 {
+
+      top: 309.18px;
+      left: 529.3px;
+
+
+    }
+
+    #div10 {
+
+      top: 309.18px;
+      left: 792.7px;
+
+    }
+
+    .crow {
+     
+      box-shadow: 5px 5px gray;
+      background-image: url("./../image/crow4.jpg"); 
+      display: inline-block;
+      border-radius: 50%;
+      outline: 2px solid rgb(1, 1, 19);
+      width: 40px;
+      height: 40px;
+      text-shadow: 2px 2px 5px rgb(8, 6, 6);
+      background-color: rgb(212, 21, 14);
+      cursor: pointer;
+
+
+    }
+
+    .egle {
+      box-shadow: 5px 5px gray;
+      background-image: url("./../image/egle.jpg"); 
+      display: inline-block;
+      border-radius: 50%;
+      outline: 2px solid rgb(1, 1, 19);
+      width: 40px;
+      height: 40px;
+      text-shadow: 2px 2px 5px rgb(63, 60, 60);
+      background-color: rgb(110, 110, 110);
+      cursor: pointer;
+    }
+
+    .hide {
+      display: none;
+    }
+    .popup{
+      width:300px;
+      background: #fff;
+      position:absolute;
+      top:0;
+      left:50%;
+      transform:translate(-50%,-50%) scale(0.1);
+      text-align: center;
+      padding:0 30px 30px;
+      color:#333;
+      visibility: hidden;
+      transform: transform 0.4s,top0.4s;
+      border-radius: 10%;
+
+    }
+    .popup img{
+      width:100px;
+      margin-top:-50px;
+      border-radius:27%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    }
+    .popup button{
+      width:100%;
+      margin-top:50px;
+      padding:10px 0;
+      background: #6fd649;
+      color:#fff;
+      border:0;
+      outline:none;
+      border-radius:4px;
+      cursor:pointer;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+    }
+    .open-popup{
+      visibility: visible;
+      top:50%;
+      transform:translate(-50%,-50%) scale(1);
+    }
+  </style>
+  <script>
+
+
+
+
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+
+</head>
+
+<body data-tilt>
+
+   
+
+  <div class="grid-container">
+    <div class="grid-item3">
+      <div >
+        
+        <svg width="1200" height="510" >
+
+
+          <polygon points="600,80 350,483 910,203 290,203 850,483"
+            style="fill:rgb(218, 240, 98);stroke:black;stroke-width:2;fill-rule:evenodd; " />
+        </svg>
+      </div>
+
+      <div>
+        <div class="place" id="div1"></div>
+        <div class="place" id="div2"></div>
+        <div class="place" id="div3"></div>
+        <div class="place" id="div4"></div>
+        <div class="place" id="div5"></div>
+        <div class="place" id="div6"></div>
+        <div class="place" id="div7"></div>
+        <div class="place" id="div8"></div>
+        <div class="place" id="div9"></div>
+        <div class="place" id="div10"></div>
+      </div>
+
+      
+      <div class="egle" id="8" draggable="true"></div>
+      <div class="crow" id="1" draggable="true"></div>
+      <div class="crow" id="2" draggable="true"></div>
+      <div class="crow" id="3" draggable="true"></div>
+      <div class="crow" id="4" draggable="true"></div>
+      <div class="crow" id="5" draggable="true"></div>
+      <div class="crow" id="6" draggable="true"></div>
+      <div class="crow" id="7" draggable="true"></div>
+
+      <div class="popup" id="crowwin">
+        <img src="./../image/crowwin.jpg">
+        <h2>Crow Win!</h2>
+        <button type="button" id="button1" onclick="document.location='2022201020.html'">Play Again</button>
+       </div>
+
+       <div class="popup" id="eglewin">
+        <img src="./../image/eglewin.jpg">
+        <h2>Egle Win!</h2>
+        <button type="button" id="button2" onclick="document.location='2022201020.html'">Play Again</button>
+       </div>
+       <div class="popup" id="turn">
+        <img src="./../image/stop.jpg">
+        <h2>Its not your turn!</h2>
+        <button type="button" id="button3" onclick="closePopup()">OK</button>
+       </div>
+       <div class="popup" id="warning">
+        <img src="./../image/warning.jpg">
+        <h2>Please first put all crow!</h2>
+        <button type="button" id="button4" onclick="closePopupwar()">OK</button>
+       </div>
+
+       <div class="popup" id="notvalid">
+        <img src="./../image/notvalid.jpg">
+        <h2>Not valid move!</h2>
+        <button type="button" id="button5" onclick="closePopupvalid()">OK</button>
+       </div>
+      <div><h6><a href="" id="linkforlogs" download="code.txt" >Download </a></h6></div>
+       
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./../JS/extra.js"></script>
+  <script src="./../JS/tilt.jquery.js"></script>
+
+
+</body>
+
+</html>
